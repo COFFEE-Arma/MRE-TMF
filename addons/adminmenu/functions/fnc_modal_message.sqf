@@ -38,7 +38,7 @@ _ctrlButtonPreview ctrlAddEventHandler ["buttonClick", {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
         if (_venue isEqualTo QFUNC(showSubtitle)) then {
-            ["CO", _editText] call FUNC(showSubtitle);
+            ["HQ", _editText] call FUNC(showSubtitle);
         } else {
             if (_venue isEqualTo "hint") then {
                 hint format ["\n\n%1", _editText];
@@ -70,7 +70,7 @@ _ctrlButtonCommit ctrlAddEventHandler ["buttonClick", {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
         if (_venue isEqualTo QFUNC(showSubtitle)) then {
-            ["CO", _editText] remoteExec [_venue, GVAR(utilityData)];
+            ["HQ", _editText] remoteExec [_venue, GVAR(utilityData)];
         } else {
             if (_venue isEqualTo "hint") then {
                 _editText = format ["\n\n%1", _editText];
