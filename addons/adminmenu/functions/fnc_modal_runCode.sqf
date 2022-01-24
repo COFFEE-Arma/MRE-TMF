@@ -44,7 +44,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
 
     private _editText = ctrlText _ctrlEdit;
     if (_editText isEqualTo "") then {
-        systemChat "[TMF Admin Menu] Code field is empty";
+        systemChat "[MRE Admin Menu] Code field is empty";
     } else {
         private _code = compile _editText;
         private _selected = lbCurSel _ctrlCombo;
@@ -75,7 +75,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
             };
         };
 
-        systemChat format ["[TMF Admin Menu] Code was executed on %1", _ctrlCombo lbText (lbCurSel _ctrlCombo)];
+        systemChat format ["[MRE Admin Menu] Code was executed on %1", _ctrlCombo lbText (lbCurSel _ctrlCombo)];
         [format ["%1 Executed code:%2, on %3",profileName,_code,_target],false,"Admin Menu"] call FUNC(log);
         GVAR(utility_runcode_last) = _editText;
     };

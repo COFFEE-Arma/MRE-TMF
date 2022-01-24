@@ -59,10 +59,10 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
 
                     _unit moveInAny _parachute;
 
-                    "[TMF Admin Menu] You were paradropped" remoteExec ["systemChat", _unit];
+                    "[MRE Admin Menu] You were paradropped" remoteExec ["systemChat", _unit];
                 } else {
                     _unit setVehiclePosition [_pos, [], 0, "FORM"];
-                    "[TMF Admin Menu] You were teleported" remoteExec ["systemChat", _unit];
+                    "[MRE Admin Menu] You were teleported" remoteExec ["systemChat", _unit];
                 };
             } else { // vehicles
                 if (_unit isKindOf "AirVehicle" && !isTouchingGround _unit) then { // flying aircraft
@@ -90,11 +90,11 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
                 };
 
                 private _crew = crew _unit;
-                "[TMF Admin Menu] Your vehicle was teleported" remoteExec ["systemChat", _crew];
+                "[MRE Admin Menu] Your vehicle was teleported" remoteExec ["systemChat", _crew];
             };
         }, 0.1, [_pos, +GVAR(utilityData)]] call CBA_fnc_addPerFrameHandler;
 
-        systemChat format ["[TMF Admin Menu] Teleported %1 players", _numPlayers];
+        systemChat format ["[MRE Admin Menu] Teleported %1 players", _numPlayers];
 
         [format [
             "%1 %2 %3 %4 %5",

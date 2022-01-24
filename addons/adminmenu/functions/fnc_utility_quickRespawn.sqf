@@ -1,6 +1,6 @@
 #include "\x\tmf\addons\adminmenu\script_component.hpp"
 
-systemChat "[TMF Admin Menu] Quick Respawn:";
+systemChat "[MRE Admin Menu] Quick Respawn:";
 private _str = "";
 {
     _str = _str + format ["[%1: %2]", name _x, str ((_x getVariable [QEGVAR(spectator,unitData), false]) isEqualType [])];
@@ -9,4 +9,4 @@ private _str = "";
 } forEach GVAR(utilityData);
 systemChat _str;
 
-[["%1 Quick Respawned %2",profileName,_str],false,"[TMF Admin Menu] "];
+[["%1 Quick Respawned %2",profileName,_str],false,"[MRE Admin Menu] "];

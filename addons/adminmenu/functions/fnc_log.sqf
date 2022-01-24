@@ -8,14 +8,14 @@ Description:
 Parameters:
     _message - Message to be displayed [String]
     _isWarning - Whether to display as warning [Bool]
-    _tag - Tag that message will be prefixed with [String, defaults to "[TMF Log]"]
+    _tag - Tag that message will be prefixed with [String, defaults to "[MRE Log]"]
 
 Returns:
     Nil
 
 Examples:
     (begin example)
-        ["Everything is on fire!",true,"[TMF Firealarm]"] call TMF_adminmenu_fnc_log;
+        ["Everything is on fire!",true,"[MRE Firealarm]"] call TMF_adminmenu_fnc_log;
     (end)
     (begin example)
         [format ["%1 did something",profileName]] call TMF_adminmenu_fnc_log;

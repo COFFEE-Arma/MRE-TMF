@@ -22,7 +22,7 @@ private _isValidCurator = false;
     if (_isValidCurator) exitWith {
         unassignCurator _x;
         _unit assignCurator _x;
-        "[TMF Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+        "[MRE Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
     };
 } forEach allCurators;
 
@@ -38,5 +38,5 @@ if (!_isValidCurator) then {
     } forEach ["place","edit","delete","destroy","group","synchronize"];
 
     _unit assignCurator _curator;
-    "[TMF Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+    "[MRE Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
 };

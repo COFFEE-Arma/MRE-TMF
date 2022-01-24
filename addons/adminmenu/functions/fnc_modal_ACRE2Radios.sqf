@@ -122,7 +122,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
         if (cbChecked _ctrlNetworkCheck) then {
             private _idx = lbCurSel _ctrlNetworkList;
             if (_idx < 0) exitWith {
-                systemChat "[TMF Admin Menu] No network selected";
+                systemChat "[MRE Admin Menu] No network selected";
             };
 
             _network = _ctrlNetworkList lbValue _idx;

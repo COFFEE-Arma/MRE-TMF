@@ -114,7 +114,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
         [_player, _playerFaction, _playerRole] remoteExecCall [QEFUNC(assignGear,assignGear), _player];
     } forEach GVAR(utility_assigngear_rolectrls);
 
-    systemChat format ["[TMF Admin Menu] Assigned gear to %1 players", count GVAR(utility_assigngear_rolectrls)];
+    systemChat format ["[MRE Admin Menu] Assigned gear to %1 players", count GVAR(utility_assigngear_rolectrls)];
 }];
 
 [_ctrlCheckFromMission, false] call FUNC(modal_assignGear_listboxFactions);

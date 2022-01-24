@@ -4,7 +4,7 @@ disableSerialization;
 params ["_ctrlBackground"];
 
 if (isNil QGVAR(remoteControlUnits) || {GVAR(remoteControlUnits) isEqualTo []}) exitWith {
-    systemChat "[TMF Admin Menu] No unit candidates for remote control";
+    systemChat "[MRE Admin Menu] No unit candidates for remote control";
 };
 
 private _display = ctrlParent _ctrlBackground;

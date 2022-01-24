@@ -81,7 +81,7 @@ if (_error isEqualTo "") then {
                 _reasons pushBack "Unit RC var says player shouldn't be remote controlling it";
             };
             systemChat format [
-                "[TMF Admin Menu] Remote Control stopped because: %1",
+                "[MRE Admin Menu] Remote Control stopped because: %1",
                 _reasons joinString " | "
             ];
 
@@ -100,7 +100,7 @@ if (_error isEqualTo "") then {
     }, _unit] call CBA_fnc_waitUntilAndExecute;
 } else {
     systemChat format [
-        "[TMF Admin Menu] Spectator Remote Control error: %1",
+        "[MRE Admin Menu] Spectator Remote Control error: %1",
         _error
     ];
 };

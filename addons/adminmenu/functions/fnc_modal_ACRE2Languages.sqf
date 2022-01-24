@@ -70,14 +70,14 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
 
     if (count _langsToAdd == 0) then {
         if (count _langsToRemove == 0) exitWith {
-            systemChat "[TMF Admin Menu] No changes selected";
+            systemChat "[MRE Admin Menu] No changes selected";
         };
 
-        systemChat "[TMF Admin Menu] Any change that would leave players with no language to speak will fail";
+        systemChat "[MRE Admin Menu] Any change that would leave players with no language to speak will fail";
     };
 
     [_langsToAdd, _langsToRemove] remoteExecCall [QFUNC(modal_ACRE2Languages_assign), GVAR(utilityData)];
 
-    systemChat format ["[TMF Admin Menu] Assigned ACRE2 languages to %1 player(s)", count GVAR(utilityData)];
+    systemChat format ["[MRE Admin Menu] Assigned ACRE2 languages to %1 player(s)", count GVAR(utilityData)];
     [format ["%1 Assigned ACRE2 Languages to %2",profileName,GVAR(utilityData) apply {name _x}],false,"Admin Menu"] call FUNC(log);
 }];

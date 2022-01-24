@@ -45,7 +45,7 @@ if (alive player) then {
     _ctrlCheckSpectatorTalk ctrlAddEventHandler ["CheckedChanged", {
         params ["", "_state"];
         [_state isEqualTo 1] call acre_api_fnc_setSpectator;
-        systemChat format ["[TMF Admin Menu] Spectator talk toggled %1", ["off", "on"] select _state];
+        systemChat format ["[MRE Admin Menu] Spectator talk toggled %1", ["off", "on"] select _state];
         if (_state isEqualTo 1) then {
             [format ["%1 Started talking to spectators",profileName],false,"Admin Menu"] call FUNC(log);
         } else {

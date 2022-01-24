@@ -4,7 +4,7 @@ disableSerialization;
 params ["_utilityFunction", "_utilityName", ["_args", 0]];
 
 if (isNil _utilityFunction) exitWith {
-    systemChat format ["[TMF Admin Menu] Modal utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
+    systemChat format ["[MRE Admin Menu] Modal utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
 };
 
 GVAR(utilityData) = [];
@@ -21,7 +21,7 @@ if ((missionNamespace getVariable [QGVAR(selectedTab), -1]) isEqualTo IDC_TMF_AD
 };
 
 if (_exit) exitWith {
-    systemChat "[TMF Admin Menu] No valid player(s) selected for the action!";
+    systemChat "[MRE Admin Menu] No valid player(s) selected for the action!";
 };
 
 GVAR(modalDetails) = [_utilityFunction, _utilityName, _args];

@@ -9,21 +9,21 @@ if (!isNil QGVAR(selectedTab)) then {
         GVAR(utilityData) = GVAR(playerManagement_selected) apply {_x call BIS_fnc_objectFromNetId};
 
         if ((count GVAR(utilityData)) isEqualTo 0) exitWith {
-            systemChat "[TMF Admin Menu] No players selected for the action!";
+            systemChat "[MRE Admin Menu] No players selected for the action!";
         };
 
         if (_requireAlive) then {
             GVAR(utilityData) = GVAR(utilityData) select {alive _x && _x isKindOf "CAManBase"};
 
             if ((count GVAR(utilityData)) isEqualTo 0) exitWith {
-                systemChat "[TMF Admin Menu] No alive players selected for the action!";
+                systemChat "[MRE Admin Menu] No alive players selected for the action!";
             };
         };
     };
 };
 
 if (isNil _utilityFunction) then {
-    systemChat format ["[TMF Admin Menu] Utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
+    systemChat format ["[MRE Admin Menu] Utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
 } else {
     call (missionNamespace getVariable _utilityFunction);
 };

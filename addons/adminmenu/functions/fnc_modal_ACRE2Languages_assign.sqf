@@ -6,11 +6,11 @@ private _spokenLangs = (call acre_sys_core_fnc_getSpokenLanguages) - _langsToRem
 _spokenLangs append _langsToAdd;
 
 if (count _spokenLangs == 0) exitWith {
-    systemChat "[TMF Admin Menu] Failed to assign ACRE2 languages";
+    systemChat "[MRE Admin Menu] Failed to assign ACRE2 languages";
 };
 
 private _spokenLangsIds = _spokenLangs apply {[_x] call acre_sys_core_fnc_getLanguageId};
 ACRE_SPOKEN_LANGUAGES = _spokenLangsIds;
 [_spokenLangs select 0] call acre_sys_core_fnc_setSpeakingLanguage;
 
-systemChat "[TMF Admin Menu] New ACRE2 babel language(s) assigned";
+systemChat "[MRE Admin Menu] New ACRE2 babel language(s) assigned";
