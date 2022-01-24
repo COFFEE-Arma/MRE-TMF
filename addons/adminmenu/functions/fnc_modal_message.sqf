@@ -17,7 +17,7 @@ _ctrlCombo ctrlSetPosition [0.1 * TMF_ADMINMENU_STD_WIDTH, _ctrlGrpHeight - TMF_
 _ctrlCombo ctrlCommit 0;
 _ctrlCombo lbAdd "Show in Chat";
 _ctrlCombo lbAdd "Show in Hint";
-_ctrlCombo lbAdd "Show in Subtitle from 'PAPA BEAR'";
+_ctrlCombo lbAdd "Show in Subtitle from 'CO'";
 _ctrlCombo lbSetCurSel 0;
 
 private _ctrlButtonPreview = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
@@ -33,21 +33,21 @@ _ctrlButtonPreview ctrlAddEventHandler ["buttonClick", {
     private _editText = ctrlText _ctrlEdit;
 
     if (_editText isEqualTo "") then {
-        systemChat "[TMF Admin Menu] Message can't be empty";
+        systemChat "[MRE Admin Menu] Message can't be empty";
     } else {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
         if (_venue isEqualTo QFUNC(showSubtitle)) then {
-            ["PAPA BEAR", _editText] call FUNC(showSubtitle);
+            ["CO", _editText] call FUNC(showSubtitle);
         } else {
             if (_venue isEqualTo "hint") then {
                 hint format ["\n\n%1", _editText];
             } else {
-                systemChat format ["[TMF Admin Message] %1", _editText];
+                systemChat format ["[MRE Admin Message] %1", _editText];
             };
         };
 
-        systemChat "[TMF Admin Menu] Message previewed";
+        systemChat "[MRE Admin Menu] Message previewed";
     };
 }];
 
@@ -75,10 +75,10 @@ _ctrlButtonCommit ctrlAddEventHandler ["buttonClick", {
             if (_venue isEqualTo "hint") then {
                 _editText = format ["\n\n%1", _editText];
             };
-            (format ["[TMF Admin Message] %1", _editText]) remoteExec [_venue, GVAR(utilityData)];
+            (format ["[MRE Admin Message] %1", _editText]) remoteExec [_venue, GVAR(utilityData)];
         };
 
-        systemChat "[TMF Admin Menu] Message sent to player(s)";
+        systemChat "[MRE Admin Menu] Message sent to player(s)";
         [format ["%1 Sent message: ""%2"", via venue: ""%3"", to: %4",profileName,_editText,_venue,GVAR(utilityData) apply {name _x}],false,"Admin Menu"] call FUNC(log);
     };
 }];
