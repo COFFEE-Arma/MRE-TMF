@@ -15,9 +15,13 @@ class CfgPatches {
 
 // SteamID64 of players authorized to access admin tools (matches against getPlayerUID)
 class GVAR(authorized_players) {
-    /*class Bear {
-        uid = "12345";
-    };*/
+    class Grumpy {
+        uid = "76561198035842849";
+    };
+
+    class Gunner {
+        uid = "76561198029708572";
+    };
 };
 
 #include "CfgFunctions.hpp"
