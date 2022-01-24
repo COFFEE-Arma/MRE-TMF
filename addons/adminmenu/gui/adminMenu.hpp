@@ -86,7 +86,7 @@ class ADDON
         class Title: RscTitle
         {
             idc = -1;
-            text = "TMF Admin Menu";
+            text = "MRE Admin Menu";
             style = 0;
             colorBackground[] = {0, 0, 0, 0};
             x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -149,7 +149,7 @@ class ADDON
         {
             idc = IDC_TMF_ADMINMENU_MSGS;
             text = "Logs";
-            tooltip = "Status and debug messages from TMF components";
+            tooltip = "Status and debug messages from MRE components - Please send to Grumpy";
             onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TMF_ADMINMENU_G_MSGS)] call FUNC(selectTab));
             x = "26.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             w = "3 * (((safezoneW / safezoneH) min 1.2) / 40)";

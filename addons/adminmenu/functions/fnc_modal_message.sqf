@@ -65,12 +65,12 @@ _ctrlButtonCommit ctrlAddEventHandler ["buttonClick", {
     GVAR(utility_message_last) = _editText; // _editText may receive local edits
 
     if (_editText isEqualTo "") then {
-        systemChat "[TMF Admin Menu] Message can't be empty";
+        systemChat "[MRE Admin Menu] Message can't be empty";
     } else {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
         if (_venue isEqualTo QFUNC(showSubtitle)) then {
-            ["PAPA BEAR", _editText] remoteExec [_venue, GVAR(utilityData)];
+            ["CO", _editText] remoteExec [_venue, GVAR(utilityData)];
         } else {
             if (_venue isEqualTo "hint") then {
                 _editText = format ["\n\n%1", _editText];
